@@ -1,5 +1,6 @@
 import './App.css';
 import TodoForm from './components/TodoForm/TodoForm';
+import TodoTable from './components/TodoTable/TodoTable';
 import logo from './todo-logo.png';
 
 function App() {
@@ -34,38 +35,11 @@ function App() {
             
             {/* Create todo form end */}
 
+            
             {/* Todo list Table start */}
-            <div id="todo-list-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>S.no</th>
-                            <th>Task</th>
-                            <th>Description</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>gh</td>
-                            <td>bhj</td>
-                            <td>
-                                <button>Delete</button>
-                            </td>
-                        </tr>
-                       
-                        <tr>
-                            <td>2</td>
-                            <td>Free Freshness</td>
-                            <td>gvvvvvkvjvjk</td>
-                            <td>
-                                <button>Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
+            <TodoTable />
+
             {/* Todo list Table end */}
 
         </div>
