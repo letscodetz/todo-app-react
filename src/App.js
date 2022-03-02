@@ -9,6 +9,10 @@ function App() {
 
     const [data, setData] = useState([]);
 
+    const addTodo = (newTodo) => {
+        setData([...data, newTodo]);
+    }
+
 
   return (
     <div id="todo-app">
@@ -36,7 +40,7 @@ function App() {
             </div>
             
             {/* Create todo form */}
-            <TodoForm  setData={setData} />
+            <TodoForm  addTodo={addTodo} />
 
             
             {/* Create todo form end */}

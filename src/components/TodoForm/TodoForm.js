@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 
 function TodoForm(props) {
-    const { setData } = props;
+    const { addTodo } = props;
     
     const [task,setText] = useState('');
     const [description,setDescription] = useState('');
@@ -15,7 +15,7 @@ function TodoForm(props) {
         e.preventDefault();
 
         const newTodo = { task, description };
-        setData([newTodo]);
+        addTodo(newTodo);
         e.target.reset();
         
     }
