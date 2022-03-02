@@ -16,6 +16,7 @@ function TodoForm(props) {
 
         const newTodo = { task, description };
         setData([newTodo]);
+        e.target.reset();
         
     }
 
