@@ -1,6 +1,19 @@
 
+import {useState} from 'react';
 
-function TodoTable (){
+function TodoTable (props){
+    const { data } = props;
+    
+
+  const displayTodo = () => data.map((todo, i) => {
+        return (
+            <tr key={i}>
+                <td>{i + 1}</td>
+                <td>{todo.task}</td>
+                <td>{todo.description}</td>
+            </tr>
+        );
+    });
 
     return(
 
@@ -15,23 +28,7 @@ function TodoTable (){
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>gh</td>
-                    <td>bhj</td>
-                    <td>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-               
-                <tr>
-                    <td>2</td>
-                    <td>Free Freshness</td>
-                    <td>gvvvvvkvjvjk</td>
-                    <td>
-                        <button>Delete</button>
-                    </td>
-                </tr>
+                {displayTodo()}
             </tbody>
         </table>
     </div>

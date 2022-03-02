@@ -1,7 +1,9 @@
 import {useState} from 'react';
 
 
-function TodoForm() {
+function TodoForm(props) {
+    const { setData } = props;
+    
     const [task,setText] = useState('');
     const [description,setDescription] = useState('');
 
@@ -11,8 +13,10 @@ function TodoForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('task', task);
-        console.log('description', description);
+
+        const newTodo = { task, description };
+        setData([newTodo]);
+        
     }
 
     return (

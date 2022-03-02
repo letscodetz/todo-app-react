@@ -1,9 +1,15 @@
+
+import {useState} from 'react';
 import './App.css';
 import TodoForm from './components/TodoForm/TodoForm';
 import TodoTable from './components/TodoTable/TodoTable';
 import logo from './todo-logo.png';
 
 function App() {
+
+    const [data, setData] = useState([]);
+
+
   return (
     <div id="todo-app">
       
@@ -30,7 +36,7 @@ function App() {
             </div>
             
             {/* Create todo form */}
-            <TodoForm />
+            <TodoForm  setData={setData} />
 
             
             {/* Create todo form end */}
@@ -38,7 +44,7 @@ function App() {
             
             {/* Todo list Table start */}
 
-            <TodoTable />
+            <TodoTable data={data} />
 
             {/* Todo list Table end */}
 
