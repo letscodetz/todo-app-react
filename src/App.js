@@ -1,9 +1,11 @@
 import './App.css';
+import TodoForm from './components/TodoForm/TodoForm';
 import logo from './todo-logo.png';
 
 function App() {
   return (
     <div id="todo-app">
+      
 
         {/* Header start */}
         <div id="header">
@@ -27,24 +29,9 @@ function App() {
             </div>
             
             {/* Create todo form */}
-            <div>
-                <form id="todo-form">
-                    <div class="todo-form-item">
-                        <label>Task</label>
-                        <input type="text" />
-                    </div>
+            <TodoForm />
 
-                    <div class="todo-form-item">
-                        <label>Description</label>
-                        <textarea rows="5"></textarea>
-                    </div>
-
-                    <input type="submit" value="Add Item" />
-
-
-                </form>
-
-            </div>
+            
             {/* Create todo form end */}
 
             {/* Todo list Table start */}
