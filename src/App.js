@@ -13,6 +13,17 @@ function App() {
         setData([...data, newTodo]);
     }
 
+    const deleteTodo = (index) => {
+        
+        const newData = data.filter((todo, i) => {
+            if (i === index) {
+                return false;
+            }
+            return true;
+        });
+        setData(newData);
+    }
+
 
   return (
     <div id="todo-app">
@@ -48,7 +59,7 @@ function App() {
             
             {/* Todo list Table start */}
 
-            <TodoTable data={data} />
+            <TodoTable data={data} deleteTodo={deleteTodo} />
 
             {/* Todo list Table end */}
 
